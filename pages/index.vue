@@ -95,6 +95,9 @@ export default {
     });
 
     return { script };
+  },
+  created() {
+    console.log(this.$fireAuth.currentUser)
   }
 };
 </script>

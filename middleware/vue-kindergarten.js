@@ -14,15 +14,14 @@ export default context => {
 		//     const action = options.routePerimeterAction || 'route';
 		// if (perimeter) {
 			const sandbox = createSandbox(child(store), {
-				perimeters: [secretPerimeter]
+                perimeters: [secretPerimeter],
+                governess: new RouteGoverness()
 			});
 
-			if (!sandbox.isAllowed('route')) {
-				return redirect('/');
-			}
+			
 		// }
 
-		//       return sandbox.guard(action, { redirect });
+		      return sandbox.guard('route', { redirect });
 		//     }
 	});
 

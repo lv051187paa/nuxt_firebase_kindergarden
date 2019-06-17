@@ -5,7 +5,6 @@ export default new BasePerimetr({
 
   govern: {    
     'can read': function(){
-        console.log(this, 222222)
         return this.isAdmin()
         },
 
