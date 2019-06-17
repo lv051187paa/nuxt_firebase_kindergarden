@@ -1,4 +1,4 @@
-const state = () => ({ user: null });
+const state = () => ({ user: '' });
 
 const getters = {
   currentUser: state => state.user

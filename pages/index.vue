@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <logo/>
+      <nuxt-link to="/about">About</nuxt-link>
       <form @submit.prevent="signUser">
         <input v-model="user" type="text">
         <input v-model="pass" type="password">
